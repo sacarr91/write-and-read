@@ -1,7 +1,7 @@
 // DONE: Include packages needed for this application
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
-require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // DONE: Create an array of questions for user input
 const questions = [
@@ -39,7 +39,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license:',
-        choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT License", "BSD 2-Clause 'Simplified' License", "BSD 3-Clause 'New' or 'Revised' License", "Boost Software License 1.0", "Creative Commons Zero v1.0 Universal", "Eclipse Public License 2.0", "GNU Affero General Public License v3.0", "GNU General Public License v2.0", "GNU Lesser General Public License v2.1", "Mozilla Public License 2.0", "The Unlicense"],
+        choices: ["Apache_License_2.0", "GNU_General_Public_License_v3.0", "MIT_License", "BSD_2-Clause_'Simplified'_License", "BSD_3-Clause_'New'_or_'Revised'_License", "Boost_Software_License_1.0", "Creative_Commons_Zero_v1.0_Universal", "Eclipse_Public_License_2.0", "GNU_Affero_General_Public_License_v3.0", "GNU_General_Public_License_v2.0", "GNU_Lesser_General_Public_License_v2.1", "Mozilla_Public_License_2.0", "The_Unlicense"],
     },
     {
         type: 'input',
@@ -53,9 +53,9 @@ const questions = [
     }];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+// function writeToFile(fileName, data) {
 
-}
+// }
 
 // TODO: Create a function to initialize app
 function init() {
@@ -63,7 +63,7 @@ function init() {
         .then((answers) => {
             const mdContent = generateMarkdown(answers);
 
-            fs.writeFile("README-template.md", mdContent, (err) =>
+            writeFile("README-template.md", mdContent, (err) =>
                 err ? console.log(err) : console.log("Successfully created MD file!")
             )
         });

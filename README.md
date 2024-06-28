@@ -1,7 +1,7 @@
-# ${title}
+# Write-and-Read README Generator
 
   ## Description
-  ${description}
+  This Node application will walk the user through creating a complete README markdown file, utilizing Inquirer prompts.
 
   ## Table of Contents</br>
   [Installation](#installation)</br>
@@ -12,20 +12,20 @@
   [Questions](#Questions)</br>
   
   ## Installation
-  ${installation}
+  `npm i` to install dependencies
   
   ## Usage
-  ${usage}
+  Use as you wish!
   
   ## License
-  This project is licensed under ${license}. ${badge} ${link}
+  ![Static Badge](https://img.shields.io/badge/license-MIT_License-blue) [learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)
 
   ## Contributing
-  ${contribution}
+  Please contact if you wish to contribute to this project.
   
   ## Tests
-  ${test}
+  After installing dependencies, run `node index.js` to test the app.
 
   ## Questions?
-  Find me on GitHub: [username](https://github.com/${username}/)</br>
-  Feel free to reach out with additional questions: ${email}
+  Find me on GitHub: [sacarr91](https://github.com/sacarr91/)</br>
+  Feel free to reach out with additional questions: sacarr91@gmail.com

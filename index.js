@@ -52,12 +52,12 @@ const questions = [
         message: 'Enter your Email Address:',
     }];
 
-// TODO: Create a function to write README file
+// USED FS.PROMISES - DONE: Create a function to write README file
 // function writeToFile(fileName, data) {
 
 // }
 
-// TODO: Create a function to initialize app
+// DONE: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
         .then((answers) => {

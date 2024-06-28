@@ -31,17 +31,17 @@ A walkthrough video that demonstrates the functionality of the README generator 
 
 - Technical Acceptance Criteria: 40%
 
-[] Uses the Inquirer package.
+[x] Uses the Inquirer package.
 
 - Repository Quality: 13%
 
-[] ...has a unique name.
+[x] ...has a unique name.
 
-[] ...follows best practices for file structure and naming conventions.
+[x] ...follows best practices for file structure and naming conventions.
 
-[] ...follows best practices for class/id naming conventions, indentation, quality comments, etc.
+[x] ...follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-[] ...contains multiple descriptive commit messages.
+[x] ...contains multiple descriptive commit messages.
 
 [] ...contains a high-quality README with description and a link to walkthrough video.
 

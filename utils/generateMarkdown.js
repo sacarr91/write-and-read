@@ -1,19 +1,67 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+function renderLicenseBadge(license) {
+  license == null
+    ? badge = ""
+    : badge = `![Static Badge](https://img.shields.io/badge/license-%24%7Blicense%7D-blue)`;
+  return badge;
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+  license == null
+    ? link = ""
+    : link = `[learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)`;
+  return link;
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {
+  renderLicenseBadge();
+  renderLicenseLink();
+  license == null
+    ? licenseSection = ""
+    : licenseSection = `This project is licensed under ${license}. ${badge} ${link}`;
+  return licenseSection;
+};
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(answers) {
+  const { title, description, installation, usage, contribution, test, license, username, email } = answers
+  renderLicenseSection(license);
+  return `# ${title}
 
+  ## Description
+  ${description}
+
+  ## Table of Contents</br>
+  [Installation](#installation)</br>
+  [Usage](#Usage)</br>
+  [License](#License)</br>
+  [Contributing](#Contributing)</br>
+  [Tests](#Tests)</br>
+  [Questions](#Questions)</br>
+  
+  ## Installation
+  ${installation}
+  
+  ## Usage
+  ${usage}
+  
+  ## License
+  This project is licensed under ${license}. ${badge} ${link}
+
+  ## Contributing
+  ${contribution}
+  
+  ## Tests
+  ${test}
+
+  ## Questions?
+  Find me on GitHub: [${username}](https://github.com/${username}/)</br>
+  Feel free to reach out with additional questions: ${email}
 `;
 }
 
@@ -32,73 +80,69 @@ module.exports = generateMarkdown;
 // GIVEN a command-line application that accepts user input...........................
 
 // WHEN I am prompted for information about my application repository
-  // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+// THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
 // TODO:::::::::::
-    // # PROJECT TITLE
-    // ## DESCRIPTION
-    // ## TABLE OF CONTENTS
-    // ## INSTALLATION
-    // ## USAGE
-    // ## LICENSE
-    // ## CONTRIBUTING
-    // ## TESTS
-    // ## QUESTIONS
+// # PROJECT TITLE
+// ## DESCRIPTION
+// ## TABLE OF CONTENTS
+// ## INSTALLATION
+// ## USAGE
+// ## LICENSE
+// ## CONTRIBUTING
+// ## TESTS
+// ## QUESTIONS
 
 // ---------------------------------------------------------------------------------
 // WHEN I enter my project title
-  // THEN this is displayed as the title of the README
+// THEN this is displayed as the title of the README
 
 // TODO:::::::::::
-    // [] write function
+// [x] write function
 
 // ---------------------------------------------------------------------------------
 // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-  // THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+// THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
 
-// TODO:::::::::::
-    // [] write functions.... array of section titles x array of info? deconstruction?
 
 
 // ---------------------------------------------------------------------------------
 // WHEN I choose a license for my application from a list of options
-  // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 
 // TODO:::::::::::
-    // [] provide list of options
-    // [] add license badge
-    // [] add license info in section
+// [x] provide list of options
+// [x] add license badge
+// [x] add license info in section
 
 
 // ---------------------------------------------------------------------------------
 // WHEN I enter my GitHub username
-  // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
 
 // TODO:::::::::::
-    // [] add username to questions section
-    // [] link username to github profile
+// [x] add username to questions section
+// [] link username to github profile
 
 // ---------------------------------------------------------------------------------
 // WHEN I enter my email address
-  // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 
 // TODO:::::::::::
-    // [] email address om questions section
-    // [] plain text blurb with direction to reach out
+// [x] email address in questions section
+// [x] plain text blurb with direction to reach out
 
 // ---------------------------------------------------------------------------------
 // WHEN I click on the links in the Table of Contents
-  // THEN I am taken to the corresponding section of the README
+// THEN I am taken to the corresponding section of the README
 
 // TODO:::::::::::
-    // [] links in table of contents (#section?)
+// [] links in table of contents (#section?)
 
 // ---------------------------------------------------------------------------------
-// TODO:::::::::::
-// [] Create a .gitignore file and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub. Be sure to create your .gitignore file *******before******** installing any npm dependencies.
 
-// TODO:::::::::::
-// [] Make sure that your repo includes a package.json with the required dependencies. You can create one by running npm init when you first set up the project, before installing any dependencies.
+// [x] Create a .gitignore file and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub. Be sure to create your .gitignore file *******before******** installing any npm dependencies.
+// [x] Make sure that your repo includes a package.json with the required dependencies. You can create one by running npm init when you first set up the project, before installing any dependencies.
 
 // TODO:::::::::::
 // [] Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
@@ -130,13 +174,13 @@ module.exports = generateMarkdown;
 // [] Uses the Inquirer package.
 
 // Repository Quality: 13%
-// [] ...has a unique name.
+// [x] ...has a unique name.
 
-// [] ...follows best practices for file structure and naming conventions.
+// [x] ...follows best practices for file structure and naming conventions.
 
-// [] ...follows best practices for class/id naming conventions, indentation, quality comments, etc.
+// [x] ...follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-// [] ...contains multiple descriptive commit messages.
+// [x] ...contains multiple descriptive commit messages.
 
 // [] ...contains a high-quality README with description and a link to walkthrough video.
 

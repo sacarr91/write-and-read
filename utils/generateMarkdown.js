@@ -2,9 +2,9 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license == null) {
-    badge = ""
+    badge = "";
   } else {
-    badge = `![Static Badge](https://img.shields.io/badge/license-${license}-blue)`
+    badge = `![Static Badge](https://img.shields.io/badge/license-${license}-blue)`;
   };
   return badge;
 };
@@ -13,9 +13,9 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license == null) {
-    link = ""
+    link = "";
   } else {
-    link = `[learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)`
+    link = `[learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)`;
   }
   return link;
 };

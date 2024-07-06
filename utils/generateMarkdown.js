@@ -1,35 +1,37 @@
 // DONE: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  license == null
-    ? badge = ""
-    : badge = `![Static Badge](https://img.shields.io/badge/license-${license}-blue)`;
+  if (license == null) {
+    badge = ""
+  } else {
+    badge = `![Static Badge](https://img.shields.io/badge/license-${license}-blue)`
+  };
   return badge;
 };
 
 // DONE: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  license == null
-    ? link = ""
-    : link = `[learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)`;
+  if (license == null) {
+    link = ""
+  } else {
+    link = `[learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)`
+  }
   return link;
 };
 
 // DONE: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license, badge, link) {
-  badge = renderLicenseBadge(license);
-  link = renderLicenseLink(license);
-  license == null
-    ? licenseSection = ""
-    : licenseSection = `${badge} ${link}`;
+function renderLicenseSection(license) {
+  renderLicenseBadge(license);
+  renderLicenseLink(license);
+  licenseSection = `${badge} ${link}`;
   return licenseSection;
 };
 
 // DONE: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-  const { title, description, installation, usage, contribution, test, license, username, email } = answers
+  const { title, description, installation, usage, contribution, test, license, username, email } = answers;
   let licenseSection = renderLicenseSection(license);
   return `# ${title}
 

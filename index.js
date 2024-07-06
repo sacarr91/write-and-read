@@ -62,10 +62,10 @@ function init() {
     inquirer.prompt(questions)
         .then((answers) => {
             const mdContent = generateMarkdown(answers);
-
-            writeFile("README-template.md", mdContent, (err) =>
-                err ? console.log(err) : console.log("Successfully created MD file!")
-            )
+        
+            writeFile("README-template.md", mdContent)
+            .catch(err ? console.log(err) : console.log("Successfully created MD file!")
+            );
         });
 };
 

@@ -9,7 +9,7 @@
   [License](#License)</br>
   [Contributing](#Contributing)</br>
   [Tests](#Tests)</br>
-  [Questions](#Questions)</br>
+  [Questions?](#Questions)</br>
   
   ## Installation
   `npm i` to install dependencies

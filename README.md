@@ -5,7 +5,7 @@
 
   ## Table of Contents</br>
   [Installation](#installation)</br>
-  [Usage](#Usage)</br>
+  [Demo](#Demo)</br>
   [License](#License)</br>
   [Contributing](#Contributing)</br>
   [Tests](#Tests)</br>
@@ -14,8 +14,7 @@
   ## Installation
   `npm i` to install dependencies
   
-  ## Usage
-  Use as you wish!
+  ## Demo
   
   ## License
   ![Static Badge](https://img.shields.io/badge/license-MIT_License-blue) [learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)

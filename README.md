@@ -4,18 +4,22 @@
   This Node application will walk the user through creating a complete README markdown file, utilizing Inquirer prompts.
 
   ## Table of Contents</br>
-  [Installation](#installation)</br>
+  [Example README](#example)</br>
   [Demo](#Demo)</br>
+  [Installation](#installation)</br>
   [License](#License)</br>
   [Contributing](#Contributing)</br>
   [Tests](#Tests)</br>
   [Questions?](#Questions)</br>
   
-  ## Installation
-  `npm i` to install dependencies
+  ## Example
+  
   
   ## Demo
   https://github.com/sacarr91/write-and-read/assets/159084766/024aff0f-05c1-4cf7-b8b5-4af492750f9f
+
+  ## Installation
+  `npm i` to install dependencies
 
   ## License
   ![Static Badge](https://img.shields.io/badge/license-MIT_License-blue) [learn more](https://medium.com/@avinashvagh/github-licenses-explained-a-quick-guide-46d98ef4ca81)
